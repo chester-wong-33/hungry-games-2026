@@ -1,31 +1,192 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block main %}
-  {% for group in groups %}
+<head>
+  <meta charset="utf-8">
+  <title>CS1010X: The Hungry Games </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" crossorigin="anonymous"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet" crossorigin="anonymous"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN">
+
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <header class="col-md-12">
+      <a href="/" class="game-title">
+        <h1 class="text-center">
+          <img class="logo" src="/img/badge.png">
+          The Hungry Games XIII
+        </h1>
+      </a>
+
+      <hr>
+    </header>
+  </div>
+
+  <main class="row">
   <div class="col-md-12">
-    <h2 class="text-center group-name">{{ group.title }}</h2>
+    <h2 class="text-center group-name">Qualifiers 1</h2>
 
     <div class="row">
-      {% for game in group.games %}
       <div class="col-sm-4">
         <a class="text-center game"
-           href="{{ Path(base_url, group.path, game.file).with_suffix('.html') }}">
-          <h3 class="game-name center">Game {{ loop.index }}</h3>
+           href="games/qual_1/game-bruce-ng-zhan-lim.html">
+          <h3 class="game-name center">Game 1</h3>
           <ul class="list-unstyled">
-            {% for name, score in game.scores | dictsort(by='value') | reverse %}
-              {% if loop.index <= group.winners %}
                 <li class="text-success">
-                  <i class="fa fa-trophy"></i> <strong>{{ name }}</strong>
+                  <i class="fa fa-trophy"></i> <strong>Lim Kia Iag</strong>
                 </li>
-              {% else %}
-                <li>{{ name }}</li>
-              {% endif %}
-            {% endfor %}
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Zhan Ruiang</strong>
+                </li>
+                <li>Bruce Samuel Dimalouw</li>
+                <li>Ng Jie Ren</li>
           </ul>
         </a>
       </div>
-      {% endfor %}
+      <div class="col-sm-4">
+        <a class="text-center game"
+           href="games/qual_1/game-koh-hong-ong-isaac-bryan.html">
+          <h3 class="game-name center">Game 2</h3>
+          <ul class="list-unstyled">
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Isaac Lam Yee Jay</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Koh Zhuo Bin Olivier</strong>
+                </li>
+                <li>Ong Shueh Tze</li>
+                <li>Bryan Cheung Jia Jie</li>
+                <li>Hong Shang Cheng</li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a class="text-center game"
+           href="games/qual_1/game-chong-wang-quek-yang-soh.html">
+          <h3 class="game-name center">Game 3</h3>
+          <ul class="list-unstyled">
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Chong Yih Yang</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Quek Beng Suan Xavier</strong>
+                </li>
+                <li>Yang Ee Cheng</li>
+                <li>Wang Xiheng</li>
+                <li>Soh Rui Yang</li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a class="text-center game"
+           href="games/qual_1/game-isaac-shi-cai-julius.html">
+          <h3 class="game-name center">Game 4</h3>
+          <ul class="list-unstyled">
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Julius Ng Tian Tai</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Isaac Tam Meng Hin</strong>
+                </li>
+                <li>Shi Jianhao</li>
+                <li>Cai Zhi Yuan</li>
+          </ul>
+        </a>
+      </div>
     </div>
   </div>
-  {% endfor %}
-{% endblock %}
+  <div class="col-md-12">
+    <h2 class="text-center group-name">Qualifiers 2</h2>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <a class="text-center game"
+           href="games/qual_2/game-isaac-lim-isaac-quek.html">
+          <h3 class="game-name center">Game 1</h3>
+          <ul class="list-unstyled">
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Isaac Lam Yee Jay</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Quek Beng Suan Xavier</strong>
+                </li>
+                <li>Lim Kia Iag</li>
+                <li>Isaac Tam Meng Hin</li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a class="text-center game"
+           href="games/qual_2/game-zhan-chong-koh-julius.html">
+          <h3 class="game-name center">Game 2</h3>
+          <ul class="list-unstyled">
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Julius Ng Tian Tai</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Koh Zhuo Bin Olivier</strong>
+                </li>
+                <li>Zhan Ruiang</li>
+                <li>Chong Yih Yang</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <h2 class="text-center group-name">Finals</h2>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <a class="text-center game"
+           href="games/finals/game-quek-isaac-koh-julius.html">
+          <h3 class="game-name center">Game 1</h3>
+          <ul class="list-unstyled">
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Julius Ng Tian Tai</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Koh Zhuo Bin Olivier</strong>
+                </li>
+                <li class="text-success">
+                  <i class="fa fa-trophy"></i> <strong>Isaac Lam Yee Jay</strong>
+                </li>
+                <li>Quek Beng Suan Xavier</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </div>
+  </main>
+</div>
+
+<footer class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      CS1010X 2026 &middot;
+      <a href="/">Hungry Games</a> &middot;
+      <a target="_blank" href="https://github.com/soedar">Soedarsono</a> &middot;
+      <a target="_blank" href="https://github.com/yangshun">Tay Yang Shun</a> &middot;
+      <a target="_blank" href="https://github.com/ZhangYiJiang">Zhang Yijiang</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/js/app.js"></script>
+</body>
+
+</html>
